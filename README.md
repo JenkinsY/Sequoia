@@ -101,6 +101,11 @@ conda activate sequoia39
  ```
  pip install -r requirements.txt 
  ```
+ ### 解决ta-lib报错
+ ```
+ ln -s /opt/homebrew/opt/ta-lib/lib/libta-lib.dylib /opt/homebrew/opt/ta-lib/lib/libta_lib.dylib
+ ```
+ 
  ### 更新akshare数据接口
  本项目已切换至akshare数据接口，该项目更新频率较高，使用前建议检查接口更新
 ``` 
