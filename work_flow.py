@@ -51,7 +51,8 @@ def process(stocks, strategies):
         time.sleep(2)
 
 def check(stocks_data, strategy, strategy_func):
-    end = settings.config['end_date']
+    # end = settings.config['end_date']
+    end = datetime.datetime.strptime(settings.config['end_date'], '%Y-%m-%d').date()
     m_filter = check_enter(end_date=end, strategy_fun=strategy_func)
     results = dict(filter(m_filter, stocks_data.items()))
     if len(results) > 0:
